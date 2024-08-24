@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="h1-wrapper">
+        <h1>WELCOME TO ROCK PAPERS AND SCISSORS GAME!</h1>
+    </div>
+    <div class="container">
+            <div class="human-wrapper">
+                <div>
+                    SCORE:
+                    <p id="human-score"></p>
+                </div>
+                <div>
+                   YOU
+                </div>
+                <div class="choices-container">
+                    <button id="rock">ROCK</button>
+                    <button id="papers">PAPERS</button>
+                    <button id="scissors">SCISSORS</button>
+                </div>
+            </div>
+
+            <div id="result">
+                ROCK, PAPERS or SCISSORS? (first to 5)
+            </div>
+            <div class="computer-wrapper">
+                <div>
+                    SCORE:
+                    <p id="computer-score"></p>
+                </div>
+                <div>
+                    COMPUTER
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+    </div>
 </body>
 </html>
