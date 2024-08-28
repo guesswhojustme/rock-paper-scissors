@@ -8,40 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="h1-wrapper">
-        <h1>WELCOME TO ROCK PAPERS AND SCISSORS GAME!</h1>
-    </div>
-    <div class="container">
-            <div class="human-wrapper">
-                <div>
-                    SCORE:
-                    <p id="human-score"></p>
+    <div class="header"><h1>ROCK PAPERS SCISSORS GAME!</h1></div>
+    <div class="main">
+        <div class="container">
+            <div class="computer-container">
+                <div class="computer">COMPUTER</div>
+                <div class="computer-buttons">
+                    <button id="comp-rock">ROCK</button>
+                    <button id="comp-papers">PAPERS</button>
+                    <button id="comp-scissors">SCISSORS</button>
                 </div>
-                <div>
-                   YOU
-                </div>
-                <div class="choices-container">
+                <div id="comp-score-div">score: 0</div>
+            </div>
+            <div id="result">
+                ROCK, PAPERS or SCISSORS?
+            </div>
+            <div class="human-container">
+                <div id="human-score-div">score: 0</div>
+                <div class="human-buttons">
                     <button id="rock">ROCK</button>
                     <button id="papers">PAPERS</button>
                     <button id="scissors">SCISSORS</button>
                 </div>
+                <div class="human">YOU</div>
             </div>
-
-            <div id="result">
-                ROCK, PAPERS or SCISSORS? (first to 5)
-            </div>
-            <div class="computer-wrapper">
-                <div>
-                    SCORE:
-                    <p id="computer-score"></p>
-                </div>
-                <div>
-                    COMPUTER
-                </div>
-                <div>
-                    <img src="" alt="">
-                </div>
-            </div>
+        </div>
     </div>
 </body>
 </html>
