@@ -41,14 +41,6 @@ function update(){
     const btn = document.createElement('button');
     btn.textContent = 'TRY AGAIN?'
     btn.setAttribute("class", "btnStyle");
-    
-    // btn.style.border = 'none';
-    // btn.style.borderRadius = '16px';
-    // btn.style.width = '221px';
-    // btn.style.height = '102px';
-    // btn.style.backgroundColor = '#D9D9D9';
-    // btn.style.filter = 'drop-shadow(0px 4px 4px #C4C4C4)';
-    // btn.style.fontSize = '24px';
 
     resultDiv.appendChild(btn);
 
