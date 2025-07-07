@@ -1,11 +1,14 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
-
 const rockCompBtn = document.getElementById('comp-rock');
 const scissorsComptBtn = document.getElementById('comp-scissors');
 const papersCompBtn = document.getElementById('comp-papers');
+const resultDiv = document.getElementById('result-container')
+const result = document.getElementById('result');
+const humanScores = document.getElementById("human-score-div");
+const computerScores = document.getElementById("comp-score-div");
+
 
 function getComputerChoice(choice){
     let randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -28,32 +31,48 @@ function getComputerChoice(choice){
         }, 500);
         return choice = "scissors"
     }
-
 };
 
-const result = document.getElementById('result');
-const humanScores = document.getElementById("human-score-div");
-const computerScores = document.getElementById("comp-score-div");
+function update(){
+        document.getElementById('rock').disabled= true;
+        document.getElementById('papers').disabled= true;
+        document.getElementById('scissors').disabled= true;
+    
+    const btn = document.createElement('button');
+    btn.textContent = 'TRY AGAIN?'
+    btn.setAttribute("class", "btnStyle");
+    
+    // btn.style.border = 'none';
+    // btn.style.borderRadius = '16px';
+    // btn.style.width = '221px';
+    // btn.style.height = '102px';
+    // btn.style.backgroundColor = '#D9D9D9';
+    // btn.style.filter = 'drop-shadow(0px 4px 4px #C4C4C4)';
+    // btn.style.fontSize = '24px';
 
+    resultDiv.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+        location.reload();
+    });
+};
 
 function announce(){
     if(humanScore === 5){
-        result.textContent = "YOU WON THE GAME!";
-        setTimeout(function() {
-            location.reload();
-        }, 2000);
+        result.textContent = "YOU WON THE GAME! ";
+        result.style.fontSize = '30px';
+        update();
     }else if (computerScore === 5){
-        result.textContent = "COMPUTER WINS!";
-        setTimeout(function() {
-            location.reload();
-        }, 2000);
+        result.textContent = "COMPUTER WINS! ";
+        result.style.fontSize = '30px';
+        update();
     }
-}
+};
 
 function rockChoice(){
     const computerSelection = getComputerChoice();
 
-   if(computerSelection === "rock") {
+    if(computerSelection === "rock") {
                 result.textContent = "its a tie!";
             } else if (computerSelection === 'scissors') {
                 result.textContent = "You win! Rock beats scissors!";  
